@@ -20,7 +20,7 @@ const Nav = StackNavigator({
             header: null
         }
     }
-})
+});
 export default class App extends Component {
     render() {
         return (

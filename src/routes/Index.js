@@ -15,63 +15,75 @@ const TabNav = TabNavigator({
         screen: Basic,
         navigationOptions:{
             tabBarLabel: '概况',
-            // tabBarIcon: ({focused}) => (
-            //     focused ? <Image
-            //         source={{uri : 'home_nor'}}
-            //         style={[tabBarIcon, {tintColor: tintColor}]}
-            //     /> : <Image
-            //         source={{uri : 'home_sel'}}
-            //         style={[tabBarIcon, {tintColor: tintColor}]}
-            //     />
-            // ),
+            tabBarIcon: ({focused}) => (
+                focused ? <Image
+                    source={{uri : 'home_sel'}}
+                    style={[styles.img]}
+                /> : <Image
+                    source={{uri : 'home_nor'}}
+                    style={[styles.img]}
+                />
+            ),
         }
     },
     List: {
         screen: List,
         navigationOptions:{
             tabBarLabel: '列表',
-            // tabBarIcon: ({tintColor}) => (
-            //     <Image
-            //         source={{uri : '识兔'}}
-            //         style={[tabBarIcon, {tintColor: tintColor}]}
-            //     />
-            // ),
+            tabBarIcon: ({focused}) => (
+                focused ? <Image
+                    source={{uri : 'list_sel'}}
+                    style={[styles.img]}
+                /> : <Image
+                    source={{uri : 'list_nor'}}
+                    style={[styles.img]}
+                />
+            ),
         }
     },
     Map: {
         screen: Map,
         navigationOptions:{
             tabBarLabel: '地图',
-            // tabBarIcon: ({tintColor}) => (
-            //     <Image
-            //         source={{uri : '识兔'}}
-            //         style={[tabBarIcon, {tintColor: tintColor}]}
-            //     />
-            // ),
+            tabBarIcon: ({focused}) => (
+                focused ? <Image
+                    source={{uri : 'map_sel'}}
+                    style={[styles.img]}
+                /> : <Image
+                    source={{uri : 'map_nor'}}
+                    style={[styles.img]}
+                />
+            ),
         }
     },
     Mine: {
         screen: Mine,
         navigationOptions:{
             tabBarLabel: '用户',
-            // tabBarIcon: ({tintColor}) => (
-            //     <Image
-            //         source={{uri : '识兔'}}
-            //         style={[tabBarIcon, {tintColor: tintColor}]}
-            //     />
-            // ),
+            tabBarIcon: ({focused}) => (
+                focused ? <Image
+                    source={{uri : 'user_sel'}}
+                    style={[styles.img]}
+                /> : <Image
+                    source={{uri : 'user_nor'}}
+                    style={[styles.img]}
+                />
+            ),
         }
     },
     Help: {
         screen: Help,
         navigationOptions:{
             tabBarLabel: '帮助',
-            // tabBarIcon: ({tintColor}) => (
-            //     <Image
-            //         source={{uri : '识兔'}}
-            //         style={[tabBarIcon, {tintColor: tintColor}]}
-            //     />
-            // ),
+            tabBarIcon: ({focused}) => (
+                focused ? <Image
+                    source={{uri : 'help_sel'}}
+                    style={[styles.img]}
+                /> : <Image
+                    source={{uri : 'help_nor'}}
+                    style={[styles.img]}
+                />
+            ),
         }
     },
 },{
@@ -92,7 +104,7 @@ const TabNav = TabNavigator({
         },
         showIcon: true  // 显示导航图标
     }
-})
+});
 
 export default class Home extends Component {
     render() {
@@ -107,5 +119,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
+    },
+    img: {
+        height: 25,
+        width: 25
     }
 });
